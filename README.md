@@ -1,6 +1,6 @@
 # Salesforce
 ### Visual Force Page:
-####* Versão1:
+* Versão1:
   ##### SLDS(head, body, footer);
   ##### Article(tag);
   ##### form(tag);
