@@ -10,5 +10,5 @@
   ##### panelgrid(tag);
   ##### pageblock;
 * Versão2:
-  #### table
+  ##### table(label,th,tr,thead,tbody)
   
