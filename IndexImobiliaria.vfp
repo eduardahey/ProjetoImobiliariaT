@@ -25,26 +25,8 @@
                     </div>
                     <div class="slds-card__body slds-card__body_inner slds-form-element__control">
                         <apex:form >
-                			<apex:pageBlock title="Cadastrar Imóveis">
-                        	<apex:pageMessages id="showMessage"></apex:pageMessages>
-                            <apex:panelGrid columns="2">
-                                Quartos: <apex:inputText value="{!quartos}"/>
-                                Banheiros: <apex:inputText value="{!banheiros}"/>
-                                Sala: <apex:inputText value="{!sala}"/>
-                                Cozinha: <apex:inputText value="{!cozinha}"/>
-                                Copa: <apex:inputText value="{!copa}"/>
-                                Suíte: <apex:inputText value="{!suite}"/>
-                                Vagas de Garagem: <apex:inputText value="{!garagem}"/>
-                                Valor: <apex:inputText value="{!valor}"/>
-                                Tipo do Imóvel:
-                            	<apex:selectList value="{!tipoImovel}" multiselect="false" size="1" required="true">
-                                	<apex:selectOptions value="{!MinhasOpcoes}"/>
-                            	</apex:selectList>
-                        	</apex:panelGrid>
-                        	<br/>
-                        	<apex:commandButton id="salvar" value="Salvar" action="{!salvarImoveis}" styleClass="slds-button slds-button_success"/>
-                    	</apex:pageBlock>
-                	</apex:form>
+                			
+                	    </apex:form>
                     </div>
                 </article>
             </div>
