@@ -25,26 +25,135 @@
                     </div>
                     <div class="slds-card__body slds-card__body_inner slds-form-element__control">
                         <apex:form >
-                			<apex:pageBlock title="Cadastrar Imóveis">
                         	<apex:pageMessages id="showMessage"></apex:pageMessages>
-                            <apex:panelGrid columns="2">
-                                Quartos: <apex:inputText value="{!quartos}"/>
-                                Banheiros: <apex:inputText value="{!banheiros}"/>
-                                Sala: <apex:inputText value="{!sala}"/>
-                                Cozinha: <apex:inputText value="{!cozinha}"/>
-                                Copa: <apex:inputText value="{!copa}"/>
-                                Suíte: <apex:inputText value="{!suite}"/>
-                                Vagas de Garagem: <apex:inputText value="{!garagem}"/>
-                                Valor: <apex:inputText value="{!valor}"/>
-                                Tipo do Imóvel:
-                            	<apex:selectList value="{!tipoImovel}" multiselect="false" size="1" required="true">
-                                	<apex:selectOptions value="{!MinhasOpcoes}"/>
-                            	</apex:selectList>
-                        	</apex:panelGrid>
-                        	<br/>
-                        	<apex:commandButton id="salvar" value="Salvar" action="{!salvarImoveis}" styleClass="slds-button slds-button_success"/>
-                    	</apex:pageBlock>
-                	</apex:form>
+                        	<table class="slds-table slds-table_bordered">
+                                <thead>
+                                	<tr>
+                                    	<th scope="col">
+                                        	<div class="slds-truncate" title="itens">ITENS</div>
+                                        </th>
+                                        <th scope="col">
+                                        	<div class="slds-truncate" title="itens">QUANTIDADE</div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                	<tr>
+                                    	<th data-label="Quartos" scope="row">
+                                        	<div class="slds-truncate" title="Quartos">
+                                                <label class="slds-form-elemnet__label">Quartos</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Quartos">
+                                        	<div class="slds-truncate" title="Quartos">
+                                                <apex:inputText value="{!quartos}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Banheiros" scope="row">
+                                        	<div class="slds-truncate" title="Banheiros">
+                                                <label class="slds-form-elemnet__label">Banheiros</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Banheiros">
+                                        	<div class="slds-truncate" title="Banheiros">
+                                                <apex:inputText value="{!banheiros}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Sala" scope="row">
+                                        	<div class="slds-truncate" title="Sala">
+                                                <label class="slds-form-elemnet__label">Sala</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Sala">
+                                        	<div class="slds-truncate" title="Sala">
+                                                <apex:inputText value="{!sala}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Cozinha" scope="row">
+                                        	<div class="slds-truncate" title="Cozinha">
+                                                <label class="slds-form-elemnet__label">Cozinha</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Cozinha">
+                                        	<div class="slds-truncate" title="Cozinha">
+                                                <apex:inputText value="{!cozinha}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Copa" scope="row">
+                                        	<div class="slds-truncate" title="Copa">
+                                                <label class="slds-form-elemnet__label">Copa</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Copa">
+                                        	<div class="slds-truncate" title="Copa">
+                                                <apex:inputText value="{!copa}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Suite" scope="row">
+                                        	<div class="slds-truncate" title="Suite">
+                                                <label class="slds-form-elemnet__label">Suíte</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Suite">
+                                        	<div class="slds-truncate" title="Suite">
+                                                <apex:inputText value="{!suite}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Garagem" scope="row">
+                                        	<div class="slds-truncate" title="Garagem">
+                                                <label class="slds-form-elemnet__label">Vagas de Garagem</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Garagem">
+                                        	<div class="slds-truncate" title="Garagem">
+                                                <apex:inputText value="{!garagem}" styleClass="slds-input"/>
+                                            </div>
+                                        </td>
+                                    </tr>
+									<tr>
+                                    	<th data-label="Valor" scope="row">
+                                        	<div class="slds-truncate" title="Valor">
+                                                <label class="slds-form-elemnet__label">Valor</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Valor">
+                                        	<div class="slds-truncate" title="Valor">
+                                                <apex:inputText value="{!valor}" styleClass="slds-input"/>                                                                                                
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                    	<th data-label="Tipo" scope="row">
+                                        	<div class="slds-truncate" title="Tipo">
+                                                <label class="slds-form-elemnet__label">Tipo do Imóvel</label>
+                                            </div>
+                                        </th>
+                                        <td data-label="Tipo">
+                                        	<div class="slds-truncate" title="Tipo">
+                            					<apex:selectList value="{!tipoImovel}" multiselect="false" size="1" required="true" styleClass="slds-input">
+                                                	<apex:selectOptions value="{!MinhasOpcoes}"/>
+                                                </apex:selectList>
+                                            </div>
+                                        </td>                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div class="slds-card__footer">
+                    			<apex:commandButton id="salvar" value="Salvar" action="{!salvarImoveis}" styleClass="slds-button slds-button_success"/>
+                    		</div>
+                		</apex:form>
                     </div>
                 </article>
             </div>
